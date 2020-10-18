@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "webp": "node webp.js",
+    "multi": "node multi.js",
+    "both": "node webp.js & node multi.js"
+  },
+  "dependencies": {
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
+    "mv": "^2.1.1",
+    "responsive-images-resizer": "^1.1.9"
+  }
+}
