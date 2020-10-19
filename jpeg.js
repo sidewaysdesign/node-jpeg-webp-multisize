@@ -11,7 +11,6 @@ if (!fs.existsSync(rootDest)) fs.mkdirSync(rootDest)
 if (config.sizes.includes(0)) {
   copyOriginalsFlag = true
   config.sizes.splice(config.sizes.indexOf(0), 1) /* remove 0 from size array and handle original size copy separately */
-  console.log(config.sizes)
 }
 
 resizer(`./${config.source}`, './' + config.destination, config.sizes)
@@ -30,7 +29,7 @@ resizer(`./${config.source}`, './' + config.destination, config.sizes)
       )
     )
     if (copyOriginalsFlag) copyOriginals() /* copy original files to destination folder */
-    console.log('Done!')
+    console.log('All done!')
   })
   .catch(err => {
     console.log('Error:', err)
@@ -40,7 +39,6 @@ const copyOriginals = () => {
   const fileSet = fs.readdirSync(rootSource).filter(o => o.endsWith(`.jpg`) || o.endsWith(`.png`))
   if (fileSet) {
     fileSet.forEach(f => {
-      console.log(rootSource + f, rootDest + f)
       fs.copyFileSync(rootSource + f, rootDest + f, err => {
         console.log('Error during non-resized copy')
       })
