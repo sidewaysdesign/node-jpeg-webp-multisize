@@ -1,7 +1,7 @@
 let config = {}
-config.sizes = [144, 244, 500, 1024]
+config.sizes = [0, 360, 600, 1024]
 config.source = 'images'
-config.destination = '_output'
-config.quality = { webp: 50 }
+config.destination = 'output'
+config.quality = { webp: 50, jpeg: 60 }
 
 module.exports = config

@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "webp": "node webp.js",
-    "multi": "node multi.js",
-    "both": "node webp.js & node multi.js"
+    "both": "node webp.js & node jpeg.js",
+    "jpeg": "node jpeg.js",
+    "webp": "node webp.js"
   },
   "dependencies": {
     "imagemin": "^7.0.1",
